@@ -17,7 +17,7 @@ def solar_predictor(Temperature,Pressure,Humidity,WindDirection,Speed):
 def main():
     st.title("Hello All!")
     html_temp = """
-    <div style = "background-color:tomato;padding:10px">
+    <div style = "background-color:DarkOrange;padding:10px">
     <h2 style = "color:white;text-align:center;"> Solar Radiaton Prediction AI App </h2>
     </div>
     """
