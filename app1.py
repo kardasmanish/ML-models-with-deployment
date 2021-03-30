@@ -39,15 +39,15 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html= True)
-    Temperature = st.text_input("Temperature (Celcius)","Type here")
+    Temperature = st.text_input("Temperature (Fahrenheit)","Type here")
     Pressure = st.text_input("Pressure (Pa)","Type here")
-    Humidity = st.text_input("Humidity (g/m3)","Type here")
-    WindDirection = st.text_input("WindDirection in Degrees ","Type here")
-    Speed = st.text_input("Speed (km/hr)","Type here")
+    Humidity = st.text_input("Humidity (%)","Type here")
+    WindDirection = st.text_input("WindDirection (Degrees) ","Type here")
+    Speed = st.text_input("Speed (miles/hr)","Type here")
     result = ""
     if st.button("Predict"):
         result = solar_predictor(Temperature,Pressure,Humidity,WindDirection,Speed)
-    st.success("The predicted radiation value is {} watt".format(result))
+    st.success("The predicted solar radiation is {} watt per meter^2".format(result))
 
 if __name__ == "__main__":
     main()
